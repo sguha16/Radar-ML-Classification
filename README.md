@@ -39,3 +39,50 @@ pip install -r requirements.txt
 
 # Run notebook
 jupyter notebook notebooks/radar_classification.ipynb
+```
+
+---
+
+## 🧠 Example Architecture
+
+```python
+nn.Sequential(
+    nn.Conv2d(1, 32, kernel_size=3),
+    nn.ReLU(),
+    nn.MaxPool2d(2),
+    nn.Conv2d(32, 64, kernel_size=3),
+    nn.ReLU(),
+    nn.Flatten(),
+    nn.Linear(64 * 6 * 6, 128),
+    nn.ReLU(),
+    nn.Linear(128, num_classes)
+)
+```
+
+---
+
+## 📈 Results
+
+| Class      | Accuracy |
+|------------|----------|
+| Pedestrian | 91%      |
+| Cyclist    | 87%      |
+| Vehicle    | 93%      |
+
+(Example results – replace with real)
+
+---
+
+## 📚 References
+
+- TI mmWave Radar Datasets
+- PyTorch Docs
+- OpenRadar Dataset
+
+---
+
+## 📬 Contact
+
+**Your Name**  
+📧 your.email@example.com  
+🔗 [LinkedIn](https://linkedin.com/in/yourname)
